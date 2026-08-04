@@ -1,0 +1,1063 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hayal Pide - Kuryelere Özel %50 İndirim Menüsü</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #d97706;
+            --primary-dark: #b45309;
+            --primary-light: #fef3c7;
+            --accent: #ef4444;
+            --whatsapp: #25d366;
+            --whatsapp-dark: #1da851;
+            --bg-dark: #0f172a;
+            --card-bg: #1e293b;
+            --text-light: #f8fafc;
+            --text-muted: #94a3b8;
+            --border: #334155;
+            --gold: #fbbf24;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+            background-color: var(--bg-dark);
+            color: var(--text-light);
+            line-height: 1.5;
+            padding-bottom: 80px;
+        }
+
+        /* Top Banner */
+        .courier-banner {
+            background: linear-gradient(135deg, #b91c1c, #d97706);
+            color: #ffffff;
+            text-align: center;
+            padding: 12px 16px;
+            font-weight: 700;
+            font-size: 0.95rem;
+            letter-spacing: 0.5px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .courier-banner span {
+            background: rgba(255,255,255,0.2);
+            padding: 2px 8px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+        }
+
+        /* Header */
+        header {
+            text-align: center;
+            padding: 40px 20px 25px;
+            background: radial-gradient(circle at top, #1e293b 0%, #0f172a 100%);
+            border-bottom: 1px solid var(--border);
+        }
+
+        .brand-logo {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: var(--gold);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 4px;
+            text-shadow: 0 2px 10px rgba(251, 191, 36, 0.2);
+        }
+
+        .subtitle {
+            font-size: 1.1rem;
+            color: var(--text-muted);
+            margin-bottom: 16px;
+        }
+
+        .badge-discount {
+            display: inline-block;
+            background-color: var(--accent);
+            color: white;
+            font-weight: 800;
+            padding: 8px 18px;
+            border-radius: 50px;
+            font-size: 1rem;
+            box-shadow: 0 0 20px rgba(239, 68, 68, 0.4);
+            margin-bottom: 20px;
+        }
+
+        /* Info Bar (Hours & Phone) */
+        .info-cards {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 12px;
+            max-width: 800px;
+            margin: 0 auto 20px;
+        }
+
+        .info-box {
+            background: rgba(30, 41, 59, 0.8);
+            border: 1px solid var(--border);
+            padding: 10px 18px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.95rem;
+            color: var(--text-light);
+        }
+
+        .info-box strong {
+            color: var(--gold);
+        }
+
+        .action-buttons {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-top: 10px;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            padding: 12px 24px;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 1rem;
+            text-decoration: none;
+            transition: all 0.2s ease;
+            box-shadow: 0 4px 14px rgba(0,0,0,0.25);
+        }
+
+        .btn-whatsapp {
+            background-color: var(--whatsapp);
+            color: #ffffff;
+        }
+
+        .btn-whatsapp:hover {
+            background-color: var(--whatsapp-dark);
+            transform: translateY(-2px);
+        }
+
+        .btn-phone {
+            background-color: var(--primary);
+            color: #ffffff;
+        }
+
+        .btn-phone:hover {
+            background-color: var(--primary-dark);
+            transform: translateY(-2px);
+        }
+
+        .btn-map {
+            background-color: #38bdf8;
+            color: #0f172a;
+        }
+
+        .btn-map:hover {
+            background-color: #0284c7;
+            color: #ffffff;
+            transform: translateY(-2px);
+        }
+
+        /* Navigation / Categories */
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 20px 16px;
+        }
+
+        .category-nav {
+            display: flex;
+            gap: 10px;
+            overflow-x: auto;
+            padding: 10px 0 15px;
+            margin-bottom: 25px;
+            scrollbar-width: thin;
+            scrollbar-color: var(--primary) var(--bg-dark);
+        }
+
+        .category-nav::-webkit-scrollbar {
+            height: 6px;
+        }
+
+        .category-nav::-webkit-scrollbar-thumb {
+            background: var(--primary);
+            border-radius: 10px;
+        }
+
+        .category-link {
+            background: var(--card-bg);
+            color: var(--text-light);
+            text-decoration: none;
+            padding: 8px 16px;
+            border-radius: 20px;
+            white-space: nowrap;
+            font-size: 0.9rem;
+            font-weight: 600;
+            border: 1px solid var(--border);
+            transition: all 0.2s ease;
+        }
+
+        .category-link:hover {
+            border-color: var(--primary);
+            color: var(--gold);
+            transform: translateY(-2px);
+        }
+
+        /* Menu Section */
+        .section-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--gold);
+            margin: 30px 0 15px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid var(--border);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .section-title span {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            font-weight: 400;
+        }
+
+        .menu-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 16px;
+        }
+
+        .product-card {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 16px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: transform 0.2s, border-color 0.2s;
+        }
+
+        .product-card:hover {
+            border-color: var(--primary);
+            transform: translateY(-3px);
+        }
+
+        .product-name {
+            font-size: 1.05rem;
+            font-weight: 600;
+            color: var(--text-light);
+            margin-bottom: 12px;
+        }
+
+        .price-container {
+            display: flex;
+            align-items: baseline;
+            justify-content: space-between;
+            background: rgba(15, 23, 42, 0.6);
+            padding: 10px 12px;
+            border-radius: 8px;
+            margin-top: auto;
+        }
+
+        .old-price {
+            text-decoration: line-through;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+
+        .new-price {
+            color: #4ade80;
+            font-size: 1.25rem;
+            font-weight: 800;
+        }
+
+        .discount-tag {
+            background-color: rgba(239, 68, 68, 0.2);
+            color: var(--accent);
+            font-size: 0.75rem;
+            font-weight: 700;
+            padding: 2px 6px;
+            border-radius: 4px;
+            margin-left: 6px;
+        }
+
+        /* Location Section */
+        .location-section {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 24px;
+            margin-top: 50px;
+            text-align: center;
+        }
+
+        .location-title {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: var(--gold);
+            margin-bottom: 12px;
+        }
+
+        .location-address {
+            color: var(--text-light);
+            font-size: 1.05rem;
+            margin-bottom: 16px;
+        }
+
+        .map-container {
+            border-radius: 12px;
+            overflow: hidden;
+            margin-top: 16px;
+            border: 1px solid var(--border);
+        }
+
+        .map-container iframe {
+            width: 100%;
+            height: 300px;
+            border: 0;
+        }
+
+        /* Sticky Bottom WhatsApp Button for Mobile */
+        .sticky-whatsapp {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: var(--whatsapp);
+            color: white;
+            padding: 14px 22px;
+            border-radius: 50px;
+            font-weight: 700;
+            text-decoration: none;
+            box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            z-index: 999;
+            transition: transform 0.2s;
+        }
+
+        .sticky-whatsapp:hover {
+            transform: scale(1.05);
+            background-color: var(--whatsapp-dark);
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 40px 20px 20px;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            border-top: 1px solid var(--border);
+            margin-top: 50px;
+        }
+
+        footer p {
+            margin-bottom: 8px;
+        }
+
+        .footer-highlight {
+            color: var(--gold);
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Top Banner -->
+    <div class="courier-banner">
+        🛵 KURYE DOSTU İŞLETME <span>%50 İNDİRİM</span>
+    </div>
+
+    <!-- Header -->
+    <header>
+        <div class="brand-logo">Hayal Pide</div>
+        <div class="subtitle">Kuryelerimize Özel Tüm Menüde %50 İndirim Fırsatı!</div>
+        <div class="badge-discount">%50 KURYE İNDİRİMİ UYGULANMIŞTIR</div>
+
+        <div class="info-cards">
+            <div class="info-box">
+                ⏰ Çalışma Saatleri: <strong>11:00 - 22:00</strong>
+            </div>
+            <div class="info-box">
+                📞 Telefon: <strong>0540 606 8696</strong>
+            </div>
+        </div>
+
+        <div class="action-buttons">
+            <a href="https://wa.me/905406068696?text=Merhaba,%20kurye%20özel%20menüsünden%20sipariş%20vermek%20istiyorum." target="_blank" class="btn btn-whatsapp">
+                💬 WhatsApp Sipariş Ver
+            </a>
+            <a href="tel:05406068696" class="btn btn-phone">
+                📞 Hemen Ara
+            </a>
+            <a href="#konum" class="btn btn-map">
+                📍 Konumu Gör
+            </a>
+        </div>
+    </header>
+
+    <div class="container">
+        <!-- Category Navigation -->
+        <nav class="category-nav">
+            <a href="#kiymali" class="category-link">Kıymalı Pideler</a>
+            <a href="#kusbasili" class="category-link">Kuşbaşılı Pideler</a>
+            <a href="#kasarli" class="category-link">Kaşarlı Pideler</a>
+            <a href="#kavurmali" class="category-link">Kavurmalı Pideler</a>
+            <a href="#vejetaryen" class="category-link">Vejetaryen Pideler</a>
+            <a href="#karisik" class="category-link">Karışık Pideler</a>
+            <a href="#kenarsiz" class="category-link">Kenarsız Pideler</a>
+            <a href="#cantik" class="category-link">Cantık</a>
+            <a href="#lahmacun" class="category-link">Lahmacunlar</a>
+            <a href="#yan-urunler" class="category-link">Yan Ürünler</a>
+            <a href="#ekonomik-menu" class="category-link">Ekonomik Menü</a>
+            <a href="#icecekler" class="category-link">İçecekler</a>
+        </nav>
+
+        <!-- Kıymalı Pideler -->
+        <section id="kiymali">
+            <h2 class="section-title">Kıymalı Pideler <span>4 Ürün</span></h2>
+            <div class="menu-grid">
+                <div class="product-card">
+                    <div class="product-name">Kıymalı Sade Pide</div>
+                    <div class="price-container">
+                        <div><span class="old-price">₺360,00</span><span class="discount-tag">-%50</span></div>
+                        <div class="new-price">₺180,00</div>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-name">Kıymalı Yumurtalı Pide</div>
+                    <div class="price-container">
+                        <div><span class="old-price">₺385,00</span><span class="discount-tag">-%50</span></div>
+                        <div class="new-price">₺192,50</div>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-name">Kıymalı Kaşarlı Pide</div>
+                    <div class="price-container">
+                        <div><span class="old-price">₺405,00</span><span class="discount-tag">-%50</span></div>
+                        <div class="new-price">₺202,50</div>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-name">Kıymalı Kaşarlı Sucuklu Pide</div>
+                    <div class="price-container">
+                        <div><span class="old-price">₺425,00</span><span class="discount-tag">-%50</span></div>
+                        <div class="new-price">₺212,50</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Kuşbaşılı Pideler -->
+        <section id="kusbasili">
+            <h2 class="section-title">Kuşbaşılı Pideler <span>4 Ürün</span></h2>
+            <div class="menu-grid">
+                <div class="product-card">
+                    <div class="product-name">Kuşbaşılı Sade Pide</div>
+                    <div class="price-container">
+                        <div><span class="old-price">₺425,00</span><span class="discount-tag">-%50</span></div>
+                        <div class="new-price">₺212,50</div>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-name">Kuşbaşılı Yumurtalı Pide</div>
+                    <div class="price-container">
+                        <div><span class="old-price">₺445,00</span><span class="discount-tag">-%50</span></div>
+                        <div class="new-price">₺222,50</div>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-name">Kuşbaşılı Kaşarlı Pide</div>
+                    <div class="price-container">
+                        <div><span class="old-price">₺465,00</span><span class="discount-tag">-%50</span></div>
+                        <div class="new-price">₺232,50</div>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-name">Kuşbaşılı Kaşarlı Sucuklu Pide</div>
+                    <div class="price-container">
+                        <div><span class="old-price">₺485,00</span><span class="discount-tag">-%50</span></div>
+                        <div class="new-price">₺242,50</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Kaşarlı Pideler -->
+        <section id="kasarli">
+            <h2 class="section-title">Kaşarlı Pideler <span>3 Ürün</span></h2>
+            <div class="menu-grid">
+                <div class="product-card">
+                    <div class="product-name">Kaşarlı Sade Pide</div>
+                    <div class="price-container">
+                        <div><span class="old-price">₺360,00</span><span class="discount-tag">-%50</span></div>
+                        <div class="new-price">₺180,00</div>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-name">Kaşarlı Yumurtalı Pide</div>
+                    <div class="price-container">
+                        <div><span class="old-price">₺385,00</span><span class="discount-tag">-%50</span></div>
+                        <div class="new-price">₺192,50</div>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-name">Kaşarlı Sucuklu Pide</div>
+                    <div class="price-container">
+                        <div><span class="old-price">₺405,00</span><span class="discount-tag">-%50</span></div>
+                        <div class="new-price">₺202,50</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Kavurmalı Pideler -->
+        <section id="kavurmali">
+            <h2 class="section-title">Kavurmalı Pideler <span>3 Ürün</span></h2>
+            <div class="menu-grid">
+                <div class="product-card">
+                    <div class="product-name">Kavurmalı Sade Pide</div>
+                    <div class="price-container">
+                        <div><span class="old-price">₺530,00</span><span class="discount-tag">-%50</span></div>
+                        <div class="new-price">₺265,00</div>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-name">Kavurmalı Yumurtalı Pide</div>
+                    <div class="price-container">
+                        <div><span class="old-price">₺550,00</span><span class="discount-tag">-%50</span></div>
+                        <div class="new-price">₺275,00</div>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-name">Kavurmalı Kaşarlı Pide</div>
+                    <div class="price-container">
+                        <div><span class="old-price">₺570,00</span><span class="discount-tag">-%50</span></div>
+                        <div class="new-price">₺285,00</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Vejetaryen Pideler -->
+        <section id="vejetaryen">
+            <h2 class="section-title">Vejetaryen Pideler <span>5 Ürün</span></h2>
+            <div class="menu-grid">
+                <div class="product-card">
+                    <div class="product-name">Kaşarlı Pide</div>
+                    <div class="price-container">
+                        <div><span class="old-price">₺360,00</span><span class="discount-tag">-%50</span></div>
+                        <div class="new-price">₺180,00</div>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-name">Sebzeli Pide</div>
+                    <div class="price-container">
+                        <div><span class="old-price">₺385,00</span><span class="discount-tag">-%50</span></div>
+                        <div class="new-price">₺192,50</div>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-name">Kaşarlı Sebzeli Pide</div>
+                    <div class="price-container">
+                        <div><span class="old-price">₺405,00</span><span class="discount-tag">-%50</span></div>
+                        <div class="new-price">₺202,50</div>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-name">Mantarlı Kaşarlı Pide</div>
+                    <div class="price-container">
+                        <div><span class="old-price">₺385,00</span><span class="discount-tag">-%50</span></div>
+                        <div class="new-price">₺192,50</div>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-name">Karışık Vejetaryen Pide</div>
+                    <div class="price-container">
+                        <div><span class="old-price">₺410,00</span><span class="discount-tag">-%50</span></div>
+                        <div class="new-price">₺205,00</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Karışık Pideler -->
+        <section id="karisik">
+            <h2 class="section-title">Karışık Pideler <span>1 Ürün</span></h2>
+            <div class="menu-grid">
+                <div class="product-card">
+                    <div class="product-name">Karışık Pide</div>
+                    <div class="price-container">
+                        <div><span class="old-price">₺570,00</span><span class="discount-tag">-%50</span></div>
+                        <div class="new-price">₺285,00</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Kenarsız Pideler -->
+        <section id="kenarsiz">
+            <h2 class="section-title">Kenarsız Pideler <span>4 Ürün</span></h2>
+            <div class="menu-grid">
+                <div class="product-card">
+                    <div class="product-name">Kenarsız Kıymalı Pide</div>
+                    <div class="price-container">
+                        <div><span class="old-price">₺405,00</span><span class="discount-tag">-%50</span></div>
+                        <div class="new-price">₺202,50</div>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-name">Kenarsız Kıymalı Yumurtalı Pide</div>
+                    <div class="price-container">
+                        <div><span class="old-price">₺425,00</span><span class="discount-tag">-%50</span></div>
+                        <div class="new-price">₺212,50</div>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-name">Kenarsız Kıymalı Kaşarlı Pide</div>
+                    <div class="price-container">
+                        <div><span class="old-price">₺445,00</span><span class="discount-tag">-%50</span></div>
+                        <div class="new-price">₺222,50</div>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-name">Kenarsız Kıymalı Kaşarlı Sucuklu Pide</div>
+                    <div class="price-container">
+                        <div><span class="old-price">₺465,00</span><span class="discount-tag">-%50</span></div>
+                        <div class="new-price">₺232,50</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Cantık -->
+        <section id="cantik">
+            <h2 class="section-title">Cantık <span>23 Ürün</span></h2>
+            <div class="menu-grid">
+                <div class="product-card">
+                    <div class="product-name">Kıymalı Cantık</div>
+                    <div class="price-container">
+                        <div><span class="old-price">₺260,00</span><span class="discount-tag">-%50</span></div>
+                        <div class="new-price">₺130,00</div>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-name">Kıymalı Yumurtalı Cantık</div>
+                    <div class="price-container">
+                        <div><span class="old-price">₺280,00</span><span class="discount-tag">-%50</span></div>
+                        <div class="new-price">₺140,00</div>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-name">Kıymalı Kaşarlı Cantık</div>
+                    <div class="price-container">
+                        <div><span class="old-price">₺300,00</span><span class="discount-tag">-%50</span></div>
+                        <div class="new-price">₺150,00</div>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-name">Kıymalı Kaşarlı Yumurtalı Cantık</div>
+                    <div class="price-container">
+                        <div><span class="old-price">₺320,00</span><span class="discount-tag">-%50</span></div>
+                        <div class="new-price">₺160,00</div>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-name">Kuşbaşılı Cantık</div>
+                    <div class="price-container">
+                        <div><span class="old-price">₺300,00</span><span class="discount-tag">-%50</span></div>
+                        <div class="new-price">₺150,00</div>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-name">Kuşbaşılı Yumurtalı Cantık</div>
+                    <div class="price-container">
+                        <div><span class="old-price">₺320,00</span><span class="discount-tag">-%50</span></div>
+                        <div class="new-price">₺160,00</div>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-name">Kuşbaşılı Kaşarlı Cantık</div>
+                    <div class="price-container">
+                        <div><span class="old-price">₺340,00</span><span class="discount-tag">-%50</span></div>
+                        <div class="new-price">₺170,00</div>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-name">Kuşbaşılı Kaşarlı Yumurtalı Cantık</div>
+                    <div class="price-container">
+                        <div><span class="old-price">₺365,00</span><span class="discount-tag">-%50</span></div>
+                        <div class="new-price">₺182,50</div>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-name">Kaşarlı Cantık</div>
+                    <div class="price-container">
+                        <div><span class="old-price">₺260,00</span><span class="discount-tag">-%50</span></div>
+                        <div class="new-price">₺130,00</div>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-name">Kaşarlı Yumurtalı Cantık</div>
+                    <div class="price-container">
+                        <div><span class="old-price">₺280,00</span><span class="discount-tag">-%50</span></div>
+                        <div class="new-price">₺140,00</div>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-name">Kavurmalı Cantık</div>
+                    <div class="price-container">
+                        <div><span class="old-price">₺365,00</span><span class="discount-tag">-%50</span></div>
+                        <div class="new-price">₺182,50</div>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-name">Kavurmalı Yumurtalı Cantık</div>
+                    <div class="price-container">
+                        <div><span class="old-price">₺385,00</span><span class="discount-tag">-%50</span></div>
+                        <div class="new-price">₺192,50</div>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-name">Kavurmalı Kaşarlı Cantık</div>
+                    <div class="price-container">
+                        <div><span class="old-price">₺405,00</span><span class="discount-tag">-%50</span></div>
+                        <div class="new-price">₺202,50</div>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-name">Kavurmalı Kaşarlı Yumurtalı Cantık</div>
+                    <div class="price-container">
+                        <div><span class="old-price">₺415,00</span><span class="discount-tag">-%50</span></div>
+                        <div class="new-price">₺207,50</div>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-name">Pastırmalı Cantık</div>
+                    <div class="price-container">
+                        <div><span class="old-price">₺160,00</span><span class="discount-tag">-%50</span></div>
+                        <div class="new-price">₺80,00</div>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-name">Pastırmalı Yumurtalı Cantık</div>
+                    <div class="price-container">
+                        <div><span class="old-price">₺180,00</span><span class="discount-tag">-%50</span></div>
+                        <div class="new-price">₺90,00</div>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-name">Pastırmalı Kaşarlı Cantık</div>
+                    <div class="price-container">
+                        <div><span class="old-price">₺180,00</span><span class="discount-tag">-%50</span></div>
+                        <div class="new-price">₺90,00</div>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-name">Pastırmalı Kaşarlı Yumurtalı Cantık</div>
+                    <div class="price-container">
+                        <div><span class="old-price">₺190,00</span><span class="discount-tag">-%50</span></div>
+                        <div class="new-price">₺95,00</div>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-name">Sucuklu Cantık</div>
+                    <div class="price-container">
+                        <div><span class="old-price">₺260,00</span><span class="discount-tag">-%50</span></div>
+                        <div class="new-price">₺130,00</div>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-name">Sucuklu Yumurtalı Cantık</div>
+                    <div class="price-container">
+                        <div><span class="old-price">₺290,00</span><span class="discount-tag">-%50</span></div>
+                        <div class="new-price">₺145,00</div>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-name">Sucuklu Kaşarlı Cantık</div>
+                    <div class="price-container">
+                        <div><span class="old-price">₺300,00</span><span class="discount-tag">-%50</span></div>
+                        <div class="new-price">₺150,00</div>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-name">Sucuklu Kaşarlı Yumurtalı Cantık</div>
+                    <div class="price-container">
+                        <div><span class="old-price">₺320,00</span><span class="discount-tag">-%50</span></div>
+                        <div class="new-price">₺160,00</div>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-name">Karışık Cantık</div>
+                    <div class="price-container">
+                        <div><span class="old-price">₺340,00</span><span class="discount-tag">-%50</span></div>
+                        <div class="new-price">₺170,00</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Lahmacunlar -->
+        <section id="lahmacun">
+            <h2 class="section-title">Lahmacunlar <span>6 Ürün</span></h2>
+            <div class="menu-grid">
+                <div class="product-card">
+                    <div class="product-name">Lahmacun</div>
+                    <div class="price-container">
+                        <div><span class="old-price">₺175,00</span><span class="discount-tag">-%50</span></div>
+                        <div class="new-price">₺87,50</div>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-name">Kaşarlı Lahmacun</div>
+                    <div class="price-container">
+                        <div><span class="old-price">₺210,00</span><span class="discount-tag">-%50</span></div>
+                        <div class="new-price">₺105,00</div>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-name">Kıymalı Kaşarlı Sucuklu Lahmacun</div>
+                    <div class="price-container">
+                        <div><span class="old-price">₺230,00</span><span class="discount-tag">-%50</span></div>
+                        <div class="new-price">₺115,00</div>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-name">Kıymalı Kaşarlı Pastırmalı Lahmacun</div>
+                    <div class="price-container">
+                        <div><span class="old-price">₺290,00</span><span class="discount-tag">-%50</span></div>
+                        <div class="new-price">₺145,00</div>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-name">Kıymalı Kaşarlı Kavurmalı Lahmacun</div>
+                    <div class="price-container">
+                        <div><span class="old-price">₺300,00</span><span class="discount-tag">-%50</span></div>
+                        <div class="new-price">₺150,00</div>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-name">Fındık Lahmacun</div>
+                    <div class="price-container">
+                        <div><span class="old-price">₺150,00</span><span class="discount-tag">-%50</span></div>
+                        <div class="new-price">₺75,00</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Yan Ürünler -->
+        <section id="yan-urunler">
+            <h2 class="section-title">Yan Ürünler <span>9 Ürün</span></h2>
+            <div class="menu-grid">
+                <div class="product-card">
+                    <div class="product-name">Fındık Lahmacun</div>
+                    <div class="price-container">
+                        <div><span class="old-price">₺150,00</span><span class="discount-tag">-%50</span></div>
+                        <div class="new-price">₺75,00</div>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-name">Haydari</div>
+                    <div class="price-container">
+                        <div><span class="old-price">₺70,00</span><span class="discount-tag">-%50</span></div>
+                        <div class="new-price">₺35,00</div>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-name">Çiğ Köfte</div>
+                    <div class="price-container">
+                        <div><span class="old-price">₺70,00</span><span class="discount-tag">-%50</span></div>
+                        <div class="new-price">₺35,00</div>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-name">Mayonez (1 Adet)</div>
+                    <div class="price-container">
+                        <div><span class="old-price">₺20,00</span><span class="discount-tag">-%50</span></div>
+                        <div class="new-price">₺10,00</div>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-name">Ketçap (1 Adet)</div>
+                    <div class="price-container">
+                        <div><span class="old-price">₺20,00</span><span class="discount-tag">-%50</span></div>
+                        <div class="new-price">₺10,00</div>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-name">Turşu Biber</div>
+                    <div class="price-container">
+                        <div><span class="old-price">₺50,00</span><span class="discount-tag">-%50</span></div>
+                        <div class="new-price">₺25,00</div>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-name">Közlenmiş Yeşil Biber</div>
+                    <div class="price-container">
+                        <div><span class="old-price">₺50,00</span><span class="discount-tag">-%50</span></div>
+                        <div class="new-price">₺25,00</div>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-name">Mevsim Yeşillikleri</div>
+                    <div class="price-container">
+                        <div><span class="old-price">₺70,00</span><span class="discount-tag">-%50</span></div>
+                        <div class="new-price">₺35,00</div>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-name">Sumaklı Soğan</div>
+                    <div class="price-container">
+                        <div><span class="old-price">₺50,00</span><span class="discount-tag">-%50</span></div>
+                        <div class="new-price">₺25,00</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Ekonomik Menü -->
+        <section id="ekonomik-menu">
+            <h2 class="section-title">Ekonomik Menü <span>3 Ürün</span></h2>
+            <div class="menu-grid">
+                <div class="product-card">
+                    <div class="product-name">Öğrenci Menü</div>
+                    <div class="price-container">
+                        <div><span class="old-price">₺550,00</span><span class="discount-tag">-%50</span></div>
+                        <div class="new-price">₺275,00</div>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-name">Süper Menü</div>
+                    <div class="price-container">
+                        <div><span class="old-price">₺585,00</span><span class="discount-tag">-%50</span></div>
+                        <div class="new-price">₺292,50</div>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-name">On Numara Menü</div>
+                    <div class="price-container">
+                        <div><span class="old-price">₺1.700,00</span><span class="discount-tag">-%50</span></div>
+                        <div class="new-price">₺850,00</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- İçecekler -->
+        <section id="icecekler">
+            <h2 class="section-title">İçecekler <span>8 Ürün</span></h2>
+            <div class="menu-grid">
+                <div class="product-card">
+                    <div class="product-name">Pepsi (33 cl)</div>
+                    <div class="price-container">
+                        <div><span class="old-price">₺100,00</span><span class="discount-tag">-%50</span></div>
+                        <div class="new-price">₺50,00</div>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-name">Yedigün (33 cl)</div>
+                    <div class="price-container">
+                        <div><span class="old-price">₺100,00</span><span class="discount-tag">-%50</span></div>
+                        <div class="new-price">₺50,00</div>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-name">Pepsi (1 lt)</div>
+                    <div class="price-container">
+                        <div><span class="old-price">₺120,00</span><span class="discount-tag">-%50</span></div>
+                        <div class="new-price">₺60,00</div>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-name">Yedigün (1 lt)</div>
+                    <div class="price-container">
+                        <div><span class="old-price">₺120,00</span><span class="discount-tag">-%50</span></div>
+                        <div class="new-price">₺60,00</div>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-name">Tombul Ayran</div>
+                    <div class="price-container">
+                        <div><span class="old-price">₺65,00</span><span class="discount-tag">-%50</span></div>
+                        <div class="new-price">₺32,50</div>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-name">Küçük Ayran</div>
+                    <div class="price-container">
+                        <div><span class="old-price">₺45,00</span><span class="discount-tag">-%50</span></div>
+                        <div class="new-price">₺22,50</div>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-name">Su (50 cl)</div>
+                    <div class="price-container">
+                        <div><span class="old-price">₺30,00</span><span class="discount-tag">-%50</span></div>
+                        <div class="new-price">₺15,00</div>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-name">Sade Soda</div>
+                    <div class="price-container">
+                        <div><span class="old-price">₺45,00</span><span class="discount-tag">-%50</span></div>
+                        <div class="new-price">₺22,50</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Location Section -->
+        <section id="konum" class="location-section">
+            <h2 class="location-title">📍 Adres ve Konum Bilgisi</h2>
+            <p class="location-address">Fevzi Çakmak Mahallesi, Millet Sokağı No: 8/A</p>
+            <p style="color: var(--text-muted); font-size: 0.95rem;">Çalışma Saatleri: Her gün 11:00 - 22:00</p>
+            
+            <div class="map-container">
+                <iframe 
+                    src="https://maps.google.com/maps?q=Fevzi%20%C3%87akmak%20Mahallesi%20Millet%20Soka%C4%9F%C4%B1%20No%208%20A&t=&z=16&ie=UTF8&iwloc=&output=embed" 
+                    allowfullscreen="" 
+                    loading="lazy">
+                </iframe>
+            </div>
+        </section>
+    </div>
+
+    <!-- Floating Sticky WhatsApp Button -->
+    <a href="https://wa.me/905406068696?text=Merhaba,%20kurye%20özel%20menüsünden%20sipariş%20vermek%20istiyorum." target="_blank" class="sticky-whatsapp">
+        💬 WhatsApp Sipariş
+    </a>
+
+    <!-- Footer -->
+    <footer>
+        <p class="footer-highlight">Hayal Pide - Kurye Dostu İşletme 🛵</p>
+        <p>Çalışma Saatleri: 11:00 - 22:00 | İletişim: 0540 606 8696</p>
+        <p>Tüm kurye arkadaşlarımıza emekleri için teşekkür ederiz.</p>
+    </footer>
+
+</body>
+</html>
